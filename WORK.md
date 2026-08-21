@@ -42,6 +42,10 @@ CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "5000"]
 
 
 ### Задача 4
+Имя скрипта - git-copy.sh
+Результат проверки https://check-host.net/check-http:
+
+![check](https://github.com/stkv1/shvirtd-example-python/blob/main/images/75.PNG)
 
 ### Задача 6
 Не получилось выполнить. Образ скачан, но команда
