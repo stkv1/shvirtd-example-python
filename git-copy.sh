@@ -41,13 +41,6 @@ if [[ -d "$TARGET_DIR" ]]; then
   (cd "$TARGET_DIR" && git pull "$REPO_URL")
 fi
 
-#echo "Переход в директорию: $LOCAL_DIR"
-#cd "$LOCAL_DIR"
-
-#Так как папка из репозитория копируется целиком, переносим ее содержимое в каталог project
-#echo "Папка $LOCAL_DIR не пустая, копируем в $TARGET_DIR"
-#mv "$LOCAL_DIR". "$TARGET_DIR"
-
 # Проверка наличия docker-compose.yml или compose.yaml
 if [[ ! -f docker-compose.yml && ! -f compose.yaml ]]; then
   echo "Ошибка: файл docker-compose.yml или compose.yaml не найден в $TARGET_DIR" >&2
