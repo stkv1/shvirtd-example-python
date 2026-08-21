@@ -58,7 +58,9 @@ SQL-запрос
 ![dive](https://github.com/stkv1/shvirtd-example-python/blob/main/images/110.PNG)
 
 `docker save hashicorp/terraform:latest -o hashicorp-terraform.tar`
+
 `tar -xvf архив.tar`
+
 Слои после распаковки архива
 
 ![layers](https://github.com/stkv1/shvirtd-example-python/blob/main/images/112.PNG)
@@ -68,7 +70,9 @@ SQL-запрос
 ![manifest](https://github.com/stkv1/shvirtd-example-python/blob/main/images/114.PNG)
 
 Искомый файл может быть в любом из слоев поэтому распаковываем все слои в папку:
+
 `tar xzf extracted/blobs/sha256/<хэш_слоя> -C output_dir`
+
 Папка с файлами после распаковки, файл terraform присутствует:
 
 ![bin](https://github.com/stkv1/shvirtd-example-python/blob/main/images/116.PNG)
