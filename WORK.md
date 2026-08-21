@@ -1,15 +1,15 @@
 ### Задача 1
 Dockerfile.python
-    #Этап 1 - Копирование файлов
-    FROM python:3.12-slim AS builder
-    WORKDIR /app
-    COPY . .
-    RUN pip install --no-cache-dir -r requirements.txt
-    EXPOSE 5000
+`#Этап 1 - Копирование файлов`
+`FROM python:3.12-slim AS builder`
+`WORKDIR /app`
+`COPY . .`
+`RUN pip install --no-cache-dir -r requirements.txt`
+`EXPOSE 5000`
 
-    #Этап 2 - Запускаем приложение с помощью uvicorn, делая его доступным по сети
-    FROM builder
-    CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "5000"]```
+`#Этап 2 - Запускаем приложение с помощью uvicorn, делая его доступным по сети`
+`FROM builder`
+`CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "5000"]`
 
 ### Задача 3
 Использовано два файла .env - env-web и env-db для передачи соответственно в web и db-контейнеры из-за разных именований переменных в контейнерах. Значения переменных передаются одни и те же.
