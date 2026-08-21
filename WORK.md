@@ -43,15 +43,28 @@ CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "5000"]
 
 ### Задача 4
 Имя скрипта - git-copy.sh
+
 Результат проверки https://check-host.net/check-http:
 
 ![check](https://github.com/stkv1/shvirtd-example-python/blob/main/images/104.PNG)
 
+SQL-запрос
+
+![check](https://github.com/stkv1/shvirtd-example-python/blob/main/images/79.PNG)
+
 ### Задача 6
-Не получилось выполнить. Образ скачан, но команда
-`dive hashicorp/terraform:latest` выводит
-```Image Source: docker://hashicorp/terraform:latest
-Fetching image... (this can take a while for large images)
-Handler not available locally. Trying to pull 'hashicorp/terraform:latest'...
-cannot fetch image
-cannot find docker client executable
+Скриншот выполнения dive:
+
+`docker save hashicorp/terraform:latest -o hashicorp-terraform.tar`
+
+`tar -xvf архив.tar`
+
+Манифест
+
+Слои
+
+Искомый файл может быть в любом из слоев поэтому распаковываем все слои в папку:
+`tar xzf extracted/blobs/sha256/<хэш_слоя> -C output_dir`
+
+
+
