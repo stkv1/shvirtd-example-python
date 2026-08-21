@@ -16,6 +16,25 @@ CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "5000"]
 Контейнеры запущены:
 ![контейнеры](https://github.com/stkv1/shvirtd-example-python/blob/main/images/22.PNG)
 
+`curl -L http://127.0.0.1:8090`
+![curl](https://github.com/stkv1/shvirtd-example-python/blob/main/images/50.PNG)
+
+В браузере
+![web](https://github.com/stkv1/shvirtd-example-python/blob/main/images/47.PNG)
+
+`show databases;`
+![db](https://github.com/stkv1/shvirtd-example-python/blob/main/images/60.PNG)
+
+`show tables;`
+![tables](https://github.com/stkv1/shvirtd-example-python/blob/main/images/62.PNG)
+
+Запросы
+![requests](https://github.com/stkv1/shvirtd-example-python/blob/main/images/63.PNG)
+
+`docker compose down`
+![down](https://github.com/stkv1/shvirtd-example-python/blob/main/images/64.PNG)
+
+
 ### Задача 4
 
 ### Задача 6
